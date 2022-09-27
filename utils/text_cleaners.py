@@ -15,6 +15,31 @@ def english_cleaner(txt):
     txt = txt.lower()
     # optional
     txt = re.sub('"', '', txt)
+    # abbreviations
+    # https://keithito.com/LJ-Speech-Dataset/
+    abbreviations = {
+        "Mr.": "Mister",
+        "Mrs.": "Misses",  # Misess (*)
+        "Dr.": "Doctor",
+        "No.": "Number",
+        "St.": "Saint",
+        "Co.": "Company",
+        "Jr.": "Junior",
+        "Maj.": "Major",
+        "Gen.": "General",
+        "Drs.": "Doctors",
+        "Rev.": "Reverend",
+        "Lt.": "Lieutenant",
+        "Hon.": "Honorable",
+        "Sgt.": "Sergeant",
+        "Capt.": "Captain",
+        "Esq.": "Esquire",
+        "Ltd.": "Limited",
+        "Col.": "Colonel",
+        "Ft.": "Fort"
+    }
+    for abbr, ext in abbreviations.items():
+        txt = re.sub(abbr, ext, txt)
     return txt
 
 
