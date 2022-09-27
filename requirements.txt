@@ -1,0 +1,8 @@
+numpy
+pandas
+tqdm
+vosk
+pydub
+regex
+torch
+transformers
