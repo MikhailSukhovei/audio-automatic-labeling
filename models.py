@@ -5,7 +5,7 @@ import json
 import tqdm
 
 import settings
-from utils.text_cleaners import russian_restore_punc_cleaner
+from utils.text_cleaners import english_restore_punc_cleaner
 
 from vosk import Model, KaldiRecognizer
 from vosk import SetLogLevel
@@ -130,7 +130,7 @@ class PunctuationPredictor:
 
         results = results[1:]
         if self.lang == 'ru':
-            results = russian_restore_punc_cleaner(results)
+            results = english_restore_punc_cleaner(results)
         result_words = results.split(' ')
 
         for i in range(len(json_data)):

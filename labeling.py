@@ -11,7 +11,7 @@ from transformers import logging
 import settings
 from models import SpeechToText, PunctuationPredictor
 from utils.audio_utils import detect_leading_silence, normalize_audio
-from utils.text_cleaners import standard_cleaner
+from utils.text_cleaners import english_cleaner
 
 sys.path.insert(0, settings.PUNC_MODEL)
 from recasepunc import CasePuncPredictor
@@ -215,7 +215,7 @@ if __name__ == "__main__":
 
     metadata = pd.concat(dataframe_list, axis=0)
     # Clean text
-    metadata['text'] = metadata['text'].apply(standard_cleaner)
+    metadata['text'] = metadata['text'].apply(english_cleaner)
     # Write metadata file
     metadata.to_csv(settings.METADATA_PATH, sep='|', header=False, index=False)
 
