@@ -13,7 +13,7 @@ from models import SpeechToText, PunctuationPredictor
 from utils.audio_utils import detect_leading_silence, normalize_audio
 from utils.text_cleaners import standard_cleaner
 
-sys.path.insert(0, os.path.join('vosk_models', 'vosk-recasepunc-ru-0.22'))
+sys.path.insert(0, settings.PUNC_MODEL)
 from recasepunc import CasePuncPredictor
 from recasepunc import WordpieceTokenizer
 

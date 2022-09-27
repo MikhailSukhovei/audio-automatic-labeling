@@ -4,13 +4,14 @@ import wave
 import json
 import tqdm
 
+import settings
 from utils.text_cleaners import russian_restore_punc_cleaner
 
 from vosk import Model, KaldiRecognizer
 from vosk import SetLogLevel
 SetLogLevel(-1)
 
-sys.path.insert(0, os.path.join('vosk_models', 'vosk-recasepunc-ru-0.22'))
+sys.path.insert(0, settings.PUNC_MODEL)
 from recasepunc import CasePuncPredictor
 from recasepunc import WordpieceTokenizer
 
@@ -103,7 +104,7 @@ class PunctuationPredictor:
     """
 
     def __init__(self, dir_model=None, lang='en'):
-        self.model = CasePuncPredictor(dir_model, lang=lang)
+        self.model = CasePuncPredictor(os.path.join(dir_model, 'checkpoint'), lang=lang)
         self.lang = lang
 
     def predict(self, json_data):

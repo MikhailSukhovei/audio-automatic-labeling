@@ -28,9 +28,9 @@ Vosk models
 """
 # load model for required language from https://alphacephei.com/vosk/models
 # you should use big models for the high-accuracy transcription
-LANG = 'ru'  # language
-ASR_MODEL = os.path.join('vosk_models', 'vosk-model-ru-0.22')  # automatic speech recognition model
-PUNC_MODEL = os.path.join('vosk_models', 'vosk-recasepunc-ru-0.22', 'checkpoint')  # restore punctuation model
+LANG = 'en'  # language
+ASR_MODEL = os.path.join('vosk_models', 'vosk-model-en-us-0.22')  # automatic speech recognition model
+PUNC_MODEL = os.path.join('vosk_models', 'vosk-recasepunc-en-0.22')  # restore punctuation model
 
 """
 Dataset settings
