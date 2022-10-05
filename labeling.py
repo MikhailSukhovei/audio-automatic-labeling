@@ -12,6 +12,7 @@ import settings
 from models import SpeechToText, PunctuationPredictor
 from utils.audio_utils import detect_leading_silence, normalize_audio
 from utils.text_cleaners import english_cleaner
+from utils.utils import dataset_stat
 
 sys.path.insert(0, settings.PUNC_MODEL)
 from recasepunc import CasePuncPredictor
@@ -241,3 +242,5 @@ if __name__ == "__main__":
     train.to_csv(settings.TRAIN_PATH, sep='|', header=False, index=False)
     val.to_csv(settings.VAL_PATH, sep='|', header=False, index=False)
     test.to_csv(settings.TEST_PATH, sep='|', header=False, index=False)
+
+    dataset_stat(settings.WAVS_DATA_PATH, settings.METADATA_PATH, settings.DATASET_STAT_PATH)

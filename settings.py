@@ -11,6 +11,7 @@ PUNC_DATA_PATH = os.path.join('data', 'punc')  # predicted text with punctuation
 WAVS_DATA_PATH = os.path.join('data', 'wavs')  # dataset samples (.wav)
 METADATA_PATH = os.path.join('data', 'metadata.csv')  # dataset metadata
 FILELISTS_PATH = os.path.join('data', 'filelists')  # train, val, test samples (https://github.com/NVIDIA/tacotron2)
+DATASET_STAT_PATH = os.path.join('data', 'dataset_stat.txt')  # dataset statistics
 
 """
 Train, val, test split
