@@ -168,7 +168,7 @@ output: ~21 hours dataset
 
 Tacotron 2 (training from scratch) + [waveglow](https://drive.google.com/file/d/1rpK8CzAAirq9sWZhe9nlfvxMF1dRgFbF/view)
 
-[Video]
+[![](https://img.youtube.com/vi/mCeGVLL2oN0/0.jpg)](https://www.youtube.com/watch?v=mCeGVLL2oN0)
 
 * input: 1 audiobook (english male speaker)
 
