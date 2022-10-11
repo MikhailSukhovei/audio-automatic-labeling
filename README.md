@@ -190,7 +190,7 @@ Tacotron 2 (training from
 [LJSpeech checkpoint](https://drive.google.com/file/d/1c5ZTuT7J08wLUoVZ2KkUs_VdZuJ86ZqA/view)) + 
 [waveglow](https://drive.google.com/file/d/1rpK8CzAAirq9sWZhe9nlfvxMF1dRgFbF/view)
 
-[Video]
+[![](https://img.youtube.com/vi/xCGEnm9XOo0/0.jpg)](https://www.youtube.com/watch?v=xCGEnm9XOo0)
 
 ## ToDo
 
